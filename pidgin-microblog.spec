@@ -2,7 +2,7 @@
 
 Name:           pidgin-microblog
 Version:        0.2.1
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Libpurple plug-in supporting microblog services like Twitter
 Group:          Networking/Instant messaging
 License:        GPLv3+
@@ -10,7 +10,7 @@ URL:            http://code.google.com/p/microblog-purple/
 Source0: http://microblog-purple.googlecode.com/files/%{upstream_name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-BuildRequires:  pidgin-devel >= 2.5, electricfence
+BuildRequires:  pidgin-devel >= 2.5, ElectricFence
 
 %description
 The project aims is to develop a set of microblog support in LibPurple base
