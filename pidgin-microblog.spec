@@ -1,7 +1,7 @@
 %define upstream_name mbpurple
 
 Name:           pidgin-microblog
-Version:        0.2.1
+Version:        0.2.2
 Release:        %mkrel 2
 Summary:        Libpurple plug-in supporting microblog services like Twitter
 Group:          Networking/Instant messaging
@@ -10,7 +10,7 @@ URL:            http://code.google.com/p/microblog-purple/
 Source0: http://microblog-purple.googlecode.com/files/%{upstream_name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-BuildRequires:  pidgin-devel >= 2.5, ElectricFence
+BuildRequires:  pidgin-devel >= 2.5
 
 %description
 The project aims is to develop a set of microblog support in LibPurple base
@@ -26,7 +26,7 @@ test it.
 
 %build
 export CFLAGS="$RPM_OPT_FLAGS"
-make LIBDIR=%{_libdir}
+%make LIBDIR=%{_libdir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
