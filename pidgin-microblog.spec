@@ -1,8 +1,8 @@
 %define upstream_name mbpurple
 
 Name:           pidgin-microblog
-Version:        0.2.2
-Release:        %mkrel 2
+Version:        0.2.4
+Release:        %mkrel 1
 Summary:        Libpurple plug-in supporting microblog services like Twitter
 Group:          Networking/Instant messaging
 License:        GPLv3+
@@ -38,8 +38,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING README.txt
+%doc README.txt
 %{_libdir}/purple-2/*.so
 %{_datadir}/pixmaps/pidgin/protocols/*/twitter.png
 %{_datadir}/pixmaps/pidgin/protocols/*/identica.png
 %{_datadir}/pixmaps/pidgin/protocols/*/laconica.png
+%{_datadir}/purple/ca-certs/EquifaxSecureGlobaleBusinessCA.pem
