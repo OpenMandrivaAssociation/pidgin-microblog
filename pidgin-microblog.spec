@@ -1,7 +1,8 @@
 %define upstream_name mbpurple
+%define _disable_ld_no_undefined 1
 
 Name:           pidgin-microblog
-Version:        0.2.4
+Version:        0.3.0
 Release:        %mkrel 1
 Summary:        Libpurple plug-in supporting microblog services like Twitter
 Group:          Networking/Instant messaging
@@ -25,13 +26,12 @@ test it.
 %setup -q -n %{upstream_name}-%{version}
 
 %build
-export CFLAGS="$RPM_OPT_FLAGS"
-%make LIBDIR=%{_libdir}
+export CFLAGS="%optflags"
+make LIBDIR=%{_libdir} LDFLAGS="%{ldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT LIBDIR=%{_libdir}
-chmod 0755 $RPM_BUILD_ROOT%{_libdir}/purple-2/libtwitter.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,7 +40,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc README.txt
 %{_libdir}/purple-2/*.so
-%{_datadir}/pixmaps/pidgin/protocols/*/twitter.png
-%{_datadir}/pixmaps/pidgin/protocols/*/identica.png
-%{_datadir}/pixmaps/pidgin/protocols/*/laconica.png
+%{_datadir}/pixmaps/pidgin/protocols/*/*.png
 %{_datadir}/purple/ca-certs/EquifaxSecureGlobaleBusinessCA.pem
