@@ -42,3 +42,29 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/purple-2/*.so
 %{_datadir}/pixmaps/pidgin/protocols/*/*.png
 %{_datadir}/purple/ca-certs/EquifaxSecureGlobaleBusinessCA.pem
+
+
+%changelog
+* Sat Nov 27 2010 Funda Wang <fwang@mandriva.org> 0.3.0-1mdv2011.0
++ Revision: 601763
+- new version 0.3.0
+
+* Sun Dec 27 2009 Frederik Himpe <fhimpe@mandriva.org> 0.2.4-1mdv2010.1
++ Revision: 482736
+- Update to new version 0.2.4
+- Don't package GPLv3 COPYING
+
+* Tue Sep 01 2009 Eugeni Dodonov <eugeni@mandriva.com> 0.2.2-2mdv2010.0
++ Revision: 423128
+- Updated to 0.2.2
+
+* Sat Mar 07 2009 Jérôme Soyer <saispo@mandriva.org> 0.2.1-2mdv2009.1
++ Revision: 351481
+- Change BR
+
+* Fri Mar 06 2009 Jérôme Soyer <saispo@mandriva.org> 0.2.1-1mdv2009.1
++ Revision: 349786
+- Fix RPM Group
+- import pidgin-microblog
+
+
