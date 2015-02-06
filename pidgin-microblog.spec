@@ -3,7 +3,7 @@
 
 Name:           pidgin-microblog
 Version:        0.3.0
-Release:        %mkrel 1
+Release:        2
 Summary:        Libpurple plug-in supporting microblog services like Twitter
 Group:          Networking/Instant messaging
 License:        GPLv3+
