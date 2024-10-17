@@ -7,7 +7,7 @@ Release:        2
 Summary:        Libpurple plug-in supporting microblog services like Twitter
 Group:          Networking/Instant messaging
 License:        GPLv3+
-URL:            http://code.google.com/p/microblog-purple/
+URL:            https://code.google.com/p/microblog-purple/
 Source0: http://microblog-purple.googlecode.com/files/%{upstream_name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
